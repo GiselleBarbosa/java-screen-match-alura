@@ -1,21 +1,31 @@
 import br.com.alura.screenmatch.models.Filme;
+import br.com.alura.screenmatch.models.Serie;
 
 public class Principal {
 
     public static void main(String[] args) {
-        Filme favorito = new Filme();
+        Filme filme = new Filme();
 
-        favorito.setNome("Armageddon");
-        favorito.setAnoDeLancamento(1998);
-        favorito.setDuracaoEmMinutos(151);
-        favorito.setIncluidoNoPlano(true);
+        filme.setNome("Armageddon");
+        filme.setAnoDeLancamento(1998);
+        filme.setDuracaoEmMinutos(151);
+        filme.setIncluidoNoPlano(true);
 
-        favorito.exibeFichaTecnica();
-        favorito.avalia(9);
-        favorito.avalia(8);
-        favorito.avalia(9);
+        filme.exibeFichaTecnica();
+        filme.avalia(9);
+        filme.avalia(8);
+        filme.avalia(9);
 
-        System.out.println("Média de avaliações do filme: " + favorito.pegaMedia());
+        System.out.println("Média de avaliações do filme: " + filme.pegaMedia());
+
+        Serie serie = new Serie();
+        serie.setNome("Grey's Anatomy");
+        System.out.println(serie.getNome());
+        serie.setTemporadas(19);
+        serie.setEpisodiosPorTemporada(24);
+        serie.setAtiva(true);
+        serie.exibeFichaTecnica();
+
     }
 
 }
