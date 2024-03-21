@@ -23,9 +23,11 @@ public class Principal {
         System.out.println(serie.getNome());
         serie.setTemporadas(19);
         serie.setEpisodiosPorTemporada(24);
+        serie.setMinutosPorEpisodio(25);
         serie.setAtiva(true);
-        serie.exibeFichaTecnica();
 
+
+        System.out.println("Duração total em minutos da série: " + serie.getDuracaoEmMinutos());
     }
 
 }
