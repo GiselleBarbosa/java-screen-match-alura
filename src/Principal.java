@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 import calculos.CalculadoraDeTempo;
 import calculos.FiltroRecomendacao;
 
+import java.util.ArrayList;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -54,6 +56,25 @@ public class Principal {
         episodio.setSerie(greysAnatomy);
         episodio.setTotalVisualizacoes(300);
         filtro.filtrar(episodio);
-    }
 
+        Filme filmeNovoCurso = new Filme();
+        filmeNovoCurso.setDuracaoEmMinutos(200);
+        filmeNovoCurso.setNome("A Origem");
+        filmeNovoCurso.avalia(9.3);
+        filmeNovoCurso.setAnoDeLancamento(2010);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(armageddon1);
+        listaDeFilmes.add(armageddon2);
+        listaDeFilmes.add(filmeNovoCurso);
+
+        System.out.println("Tamanho da lista : " + listaDeFilmes.size());
+        System.out.println("Primeiro Filme padrão : " + listaDeFilmes.get(0).getNome());
+
+        System.out.println(listaDeFilmes);
+
+        System.out.println("Primeiro Filme com toString() : " + listaDeFilmes.get(0).toString());
+
+    }
 }
+
