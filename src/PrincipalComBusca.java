@@ -3,13 +3,22 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Scanner;
 
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o titulo desejado: ");
+        var titulo = scanner.next();
+
+        String apiKey = "6ac2f190";
+
+        String url = "http://www.omdbapi.com/?t=" + titulo + "&apiKey=" + apiKey;
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://www.omdbapi.com/?t=matrix&apiKey=6ac2f190"))
+                .uri(URI.create(url))
                 .build();
 
         HttpResponse<String> response = client
