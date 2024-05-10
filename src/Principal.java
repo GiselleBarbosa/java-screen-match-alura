@@ -9,9 +9,8 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme armageddon1 = new Filme();
+        Filme armageddon1 = new Filme("Armageddon", 1998);
 
-        armageddon1.setNome("Armageddon");
         armageddon1.setAnoDeLancamento(1998);
         armageddon1.setDuracaoEmMinutos(180);
         armageddon1.setIncluidoNoPlano(true);
@@ -23,9 +22,8 @@ public class Principal {
 
         System.out.println("Média de avaliações do armageddon1: " + armageddon1.pegaMedia());
 
-        Serie greysAnatomy = new Serie();
-        greysAnatomy.setNome("Grey's Anatomy");
-        greysAnatomy.setAnoDeLancamento(2000);
+        Serie greysAnatomy = new Serie("Grey's Anatomy", 2000);
+
         greysAnatomy.exibeFichaTecnica();
         greysAnatomy.setTemporadas(19);
         greysAnatomy.setEpisodiosPorTemporada(22);
@@ -34,10 +32,8 @@ public class Principal {
         System.out.println("Duração total em minutos da série: " + greysAnatomy.getDuracaoEmMinutos());
 
         // adicionando novo filme para validacao da calculadora:
-        Filme armageddon2 = new Filme();
+        Filme armageddon2 = new Filme("Armageddon 2", 1998);
 
-        armageddon2.setNome("Armageddon 2");
-        armageddon2.setAnoDeLancamento(1998);
         armageddon2.setDuracaoEmMinutos(120);
         armageddon2.setIncluidoNoPlano(true);
 
@@ -57,11 +53,9 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtrar(episodio);
 
-        Filme filmeNovoCurso = new Filme();
+        Filme filmeNovoCurso = new Filme("A Origem", 2010);
         filmeNovoCurso.setDuracaoEmMinutos(200);
-        filmeNovoCurso.setNome("A Origem");
         filmeNovoCurso.avalia(9.3);
-        filmeNovoCurso.setAnoDeLancamento(2010);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(armageddon1);
