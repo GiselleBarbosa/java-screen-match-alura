@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.modelos;
+package br.com.alura.screenmatch.exercicios;
 
 import java.io.IOException;
 import java.net.URI;
