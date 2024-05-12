@@ -3,6 +3,7 @@ import br.com.alura.screenmatch.modelos.TituloOmdb;
 import com.google.gson.Gson;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.GsonBuilder;
+import br.com.alura.screenmatch.exception.ErroDeConversaoDeAnoException;
 
 import java.io.IOException;
 import java.net.URI;
@@ -20,7 +21,7 @@ public class PrincipalComBusca {
 
         String apiKey = "6ac2f190";
 
-        String url = "http://www.omdbapi.com/?t=" + titulo + "&apiKey=" + apiKey;
+        String url = "http://www.omdbapi.com/?t=" + titulo.replace(" " , "+") + "&apiKey=" + apiKey;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -42,11 +43,17 @@ public class PrincipalComBusca {
 
         try {
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
+            System.out.println("Titulo já convertido");
             System.out.println(meuTitulo);
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Aconteceu um erro: ");
             System.out.println(e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println("Algum erro de argumento na busca, verifique o endereço");
+        } catch (ErroDeConversaoDeAnoException e) {
+            System.out.println(e.getMessage());
         }
+
+        System.out.println("O programa finalizou corretamente!");
     }
 }
