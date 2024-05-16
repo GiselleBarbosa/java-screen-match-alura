@@ -56,6 +56,8 @@ public class PrincipalComBusca {
                 System.out.println("Titulo já convertido");
                 System.out.println(meuTitulo);
 
+                titulos.add(meuTitulo);
+
             } catch (NumberFormatException e) {
                 System.out.println("Aconteceu um erro: ");
                 System.out.println(e.getMessage());
@@ -65,6 +67,7 @@ public class PrincipalComBusca {
                 System.out.println(e.getMessage());
             }
         }
+            System.out.println(titulos);
         System.out.println("O programa finalizou corretamente!");
     }
 }
