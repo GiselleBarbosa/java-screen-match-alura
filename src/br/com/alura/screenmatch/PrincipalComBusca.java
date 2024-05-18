@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch;
+
 import br.com.alura.screenmatch.exception.ErroDeConversaoDeAnoException;
 import br.com.alura.screenmatch.modelos.Titulo;
 import br.com.alura.screenmatch.modelos.TituloOmdb;
