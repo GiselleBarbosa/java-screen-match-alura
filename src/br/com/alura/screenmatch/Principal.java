@@ -19,7 +19,7 @@ public class Principal {
 
         armageddon1.exibeFichaTecnica();
         armageddon1.avalia(9);
-        armageddon1.avalia(8);
+        armageddon1.avalia(9);
         armageddon1.avalia(9);
 
         System.out.println("Média de avaliações do armageddon1: " + armageddon1.pegaMedia());
@@ -38,6 +38,7 @@ public class Principal {
 
         armageddon2.setDuracaoEmMinutos(120);
         armageddon2.setIncluidoNoPlano(true);
+        armageddon2.avalia(10);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.incluir(armageddon1);
@@ -57,7 +58,7 @@ public class Principal {
 
         Filme filmeNovoCurso = new Filme("A Origem", 2010);
         filmeNovoCurso.setDuracaoEmMinutos(200);
-        filmeNovoCurso.avalia(9.3);
+        filmeNovoCurso.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(armageddon1);
