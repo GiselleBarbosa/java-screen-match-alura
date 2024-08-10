@@ -78,6 +78,7 @@ public class Titulo implements Comparable<Titulo> {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
+    // Implementação do compareTo foi proporcionado pelo uso da interface Comparable( implements Comparable<Titulo> )
     @Override
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
