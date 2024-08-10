@@ -7,6 +7,7 @@ import br.com.alura.screenmatch.modelos.Titulo;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -30,7 +31,7 @@ public class PrincipalComListas {
 
         Serie serie = new Serie("La Casa de Papel", 2017);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(armageddon);
         lista.add(batman);
         lista.add(aOrigem);
@@ -46,7 +47,7 @@ public class PrincipalComListas {
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+       List<String> buscaPorArtista = new ArrayList<>();
 
         buscaPorArtista.add("Will Smith");
         buscaPorArtista.add("Keanu Reeves");
